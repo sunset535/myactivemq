@@ -17,7 +17,7 @@ public class AppConfig {
 		final BrokerService broker = new BrokerService();
 		broker.addConnector("ws://localhost:61614");
 		broker.setPersistent(false);
-		broker.setShutdownHook(Collections.<Runnable> singletonList(new SpringContextHook());
+		//broker.setShutdownHook(Collections.<Runnable> singletonList(new SpringContextHook()));
 
 		final ActiveMQTopic topic = new ActiveMQTopic("jms.topic.test");
 		broker.setDestinations(new ActiveMQDestination[] { topic });
